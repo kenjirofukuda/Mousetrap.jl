@@ -47,7 +47,7 @@ end
 @info "Configuring `build_tarballs.jl.in`"
 configure_file("./build_tarballs.jl.in", "./build_tarballs.jl")
 
-path = joinpath(homedir(), ".julia/dev/mousetrap_jll"
+path = joinpath(homedir(), ".julia/dev/mousetrap_jll")
 if isfile(path)
     run(`rm -r $path`)
 end
