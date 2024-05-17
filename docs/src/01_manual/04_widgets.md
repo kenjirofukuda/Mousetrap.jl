@@ -720,7 +720,7 @@ We can manually emit this signal using `emit_signal_clicked`, or by calling `act
         set_margin!(box, 75)
     
         set_child!(window, box)
-        pesent!(window)
+        present!(window)
     end
     ```
 

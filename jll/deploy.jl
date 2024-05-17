@@ -54,3 +54,4 @@ end
 
 
 run(`julia -t 8 build_tarballs.jl --debug --verbose --deploy=$repo`)
+# run(`julia -t 8 build_tarballs.jl --debug --verbose --skip-build --deploy=$repo`)
