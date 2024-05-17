@@ -15,8 +15,8 @@ const mousetrap_commit = get_most_recent_commit("../../mousetrap")
 const mousetrap_julia_binding_commit = get_most_recent_commit("../../mousetrap_julia_binding")
 
 # if local, files will be written to ~/.julia/dev/mousetrap_jll
-const deploy_local = false
-const skip_build = true
+const deploy_local = true
+const skip_build = false
 
 if deploy_local
     @info "Deployment: local"
@@ -47,7 +47,7 @@ end
 @info "Configuring `build_tarballs.jl.in`"
 configure_file("./build_tarballs.jl.in", "./build_tarballs.jl")
 
-path = "/home/clem/.julia/dev/mousetrap_jll"
+path = joinpath(homedir(), ".julia/dev/mousetrap_jll"
 if isfile(path)
     run(`rm -r $path`)
 end
